@@ -1,0 +1,2668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>ZOOBLA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <style>
+        .cloud-banner-image img {
+            max-width: 90%;
+        }
+        
+        .cloud_sub_contain {
+            font-size: 3rem;
+            font-weight: 500;
+            color: white;
+            line-height: 2;
+        }
+        
+        .bottom-border {
+            border: 3px solid #2198e1;
+            width: 70px;
+            margin-top: 14px;
+        }
+        /*  important   */
+        
+        .text-blue {
+            color: #5b8fff;
+            border-bottom: 5px solid white;
+            font-weight: 700;
+        }
+        
+        .bg-lgray {
+            background: #fbfafa;
+        }
+        
+        .pricing-details {
+            padding: 20px;
+            box-shadow: rgb(0 0 0 / 20%) 0px 5px 15px;
+            background: white;
+        }
+        
+        .pricing-details:hover {
+            border-radius: 15px;
+            background: whitesmoke;
+        }
+        
+        .image i {
+            font-size: 30px;
+            padding: 20px;
+            border: 3px solid;
+            border-radius: 50%;
+            color: #197ecf;
+        }
+        
+        .service-area-content p {
+            font-size: 15px;
+            color: #71767b;
+            font-weight: 500;
+        }
+        
+        .service-area {
+            position: relative !important;
+            top: 0%;
+            left: 0%;
+            background-color: rgba(255, 255, 255, 0.859);
+            padding: 10px 20px;
+            width: auto!important;
+            height: 300px;
+            border-radius: 50px 0px 50px 0px;
+            box-shadow: rgb(0 0 0 / 20%) 0px 5px 15px;
+        }
+        
+        .account-area-content p {
+            font-size: 15px;
+            color: #71767b;
+            font-weight: 500;
+        }
+        
+        .account-icon i {
+            font-size: 40px;
+            padding: 15px;
+        }
+        
+        .zoobla-theme-btn {
+            width: auto;
+        }
+        
+        .account-area {
+            position: relative !important;
+            top: 0%;
+            left: 0%;
+            background-color: whitesmoke;
+            padding: 20px 20px;
+            width: auto!important;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: rgb(0 0 0 / 20%) 0px 5px 15px;
+        }
+        
+        .service-icon {
+            background: #2196e0;
+            height: 85px;
+            width: 85px;
+            text-align: center;
+            margin: auto;
+            border-radius: 50%;
+        }
+        
+        .service-icon i {
+            color: white;
+            font-size: 30px;
+            padding-top: 27px;
+        }
+        
+        .service-btn {
+            background: #219ae1;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            padding: 15px 30px 15px 30px;
+            position: absolute;
+            top: 91%;
+            left: 30%;
+        }
+        
+        .benefit-section-image {
+            height: 290px;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 5px 5px 10px #00000070;
+        }
+        
+        .benefit-section {
+            position: relative;
+            /*width: 90%;*/
+            /*max-width: 400px;*/
+            margin: auto;
+            /*overflow: hidden;*/
+        }
+        
+        .benefit-section .benefit-section-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            /*height: 99%;*/
+            width: 100%;
+            left: 10px;
+            top: 0;
+            border-radius: 10px;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+        
+        .benefit-section:hover .benefit-section-overlay {
+            opacity: 1;
+        }
+        
+        .benefit-section-image {
+            width: 100%;
+        }
+        
+        .benefit-section-details {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        
+        .benefit-section:hover .benefit-section-details {
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+        }
+        
+        .benefit-section-details h3 {
+            color: #fff;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+        }
+        
+        .benefit-section-details p {
+            color: #fff;
+            font-size: 0.8em;
+        }
+        
+        .fadeIn-top {
+            top: 20%;
+        }
+        
+        .box_cloud:hover h5 {
+            color: #fff !important;
+        }
+        
+        .box_cloud:hover p {
+            color: #fff;
+        }
+        
+        section {
+            overflow: hidden;
+        }
+        
+        .foote_logo h5,
+        h5.footer-call-to-action-title {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .btncmn-cos {
+            color: #fff;
+            background: #000;
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .modal-body input.form-control {
+            border: 0;
+        }
+        
+        .banner_cl {
+            z-index: 1;
+        }
+        
+        section.banner_top_cloud1 {
+            position: relative;
+        }
+        
+        .zooblabanner-Peoplerow {
+            position: absolute;
+            top: 0;
+        }
+        
+        .text-blue {
+            font-size: 34px;
+            padding-bottom: 10px;
+        }
+        
+        .cloud_sub_contain {
+            font-size: 20px;
+        }
+        
+        .cloud-banner-image {
+            animation: bounce 2s ease infinite;
+        }
+        
+        .box_cloud:hover {
+            background: #2199e1 !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="header-logo">
+                    <a href="index.html" class="logo-warp">
+                        <img class="img-fluid" src="assets/images/zoobla Logo Final File-03.png" alt="Zoobla" style="width: 165px;" />
+                    </a>
+                </div>
+
+                <button style="background-color: transparent !important;" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <img class="w-30-30" src="assets/images/menu.png" onclick="toggle()" alt="" />
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="cloudstorage.html">Cloud Storage</a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown_zoobla">
+                                <button class="dropbtn_zoobla">
+                                        <a>Business</a>
+                                    </button>
+                                <div class="dropdown-content_zoobla" style="margin-left: -11% !important; margin-left: 0% !important;">
+                                    <div class="menu_box" style="display: flex; width: 100%;">
+                                        <div class="me-3 business-hover-menu">
+                                            <h5 style="font-size: 1rem; font-weight: 800; border-bottom: 1px solid lightgray; padding-bottom: 10px;">
+                                                Video Analytics
+                                            </h5>
+                                            <a href="video-analytics.html" onmouseenter="changeImage('images/Homepage/dome-img2.png')">Video analytics</a>
+                                            <a href="facial-recognition.html" onmouseenter="changeImage('images/Homepage/c2.png')">Facial Recognition</a>
+                                            <a href="people-counter.html" onmouseenter="changeImage('images/Homepage/c.png')">People Counter</a>
+                                            <a href="zoobla-people.html" onmouseenter="changeImage('images/Homepage/c3.png')">Zoobla People</a>
+                                            <a href="cash-register-control.html" onmouseenter="changeImage('images/Homepage/c3.png')">Cash register control</a>
+                                            <a href="access-control.html" onmouseenter="changeImage('images/Homepage/c3.png')">Access Control</a>
+                                            <a href="licence-plate.html" onmouseenter="changeImage('images/Homepage/c3.png')">License Plate Recognition</a>
+                                            <a href="retail-security.html" onmouseenter="changeImage('images/Homepage/c3.png')">Retail Security</a>
+                                        </div>
+                                        <div class="business-hover-menu2">
+                                            <h5 style="font-size: 1rem; font-weight: 800; border-bottom: 1px solid lightgray; padding-bottom: 10px;">
+                                                Connect To The Cloud
+                                            </h5>
+                                            <a href="zoobla-bridge.html" onmouseenter="changeImage('images/Homepage/dome-img2.png')">Zoobla Bridge</a>
+                                            <a href="loss-prevention.html" onmouseenter="changeImage('images/Homepage/c2.png')">Loss Prevention</a>
+                                            <a href="save-data.html" onmouseenter="changeImage('images/Homepage/c.png')">Save Data In Cloud</a>
+                                            <a href="home-security.html" onmouseenter="changeImage('images/Homepage/c3.png')">Home Security</a>
+                                            <a href="all-industries.html" onmouseenter="changeImage('images/Homepage/c3.png')">All Industries Data Secure</a>
+                                            <a href="features.html" onmouseenter="changeImage('images/Homepage/c3.png')">Features</a>
+                                            <a onmouseenter="changeImage('images/Homepage/c3.png')"> Get Started</a>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                                                <div class="modalheader-img">
+                                                                    <img src="assets/images/headermodal-img.gif" alt="solution" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                        Schedule your demo with Zoobla!
+                                                                        <p>Please enter your details here! We will get back to you in 24 hours.</p>
+                                                                    </h1>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <form method="post" action="https://zoobla.design2login.com/store-book-demo">
+                                                                        <input type="hidden" name="_token" value="mvF4psnzXKkCSReXYyDFiHuFTtbidf7zBN2idCE0" />
+                                                                        <div class="input-group mb-3">
+                                                                            <input type="text" class="form-control" name="name" placeholder="Name" />
+                                                                        </div>
+                                                                        <div class="input-group mb-3">
+                                                                            <input type="email" class="form-control" name="email" placeholder="Email" />
+                                                                        </div>
+                                                                        <div class="input-group mb-3">
+                                                                            <input type="Mobile No" class="form-control" name="mobile" placeholder="Mobile No" />
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="imgArea">
+                                        <img src="assets/images/dome-img2.png" alt="" id="imagechangemenu1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item me-3 dropdownshow position-relative">
+                            <a class="nav-link fs-14 text-capitalize" href="">
+                                    shop
+                                </a>
+
+                            <div class="drodpwncust w-100">
+                                <div class="container">
+                                    <div class="row g-3">
+                                        <div class="col-md-4 col-lg-3">
+                                            <div class="left-tab scrollcs">
+                                                <ul class="nav nav-tabs list-unstyled lh-lg listside text-start" id="example-tabs" role="tablist">
+                                                    <div class="sidenav">
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#10" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">WIFI Cameras</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#11" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">PTZ Cameras</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#12" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">Doorbells</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#13" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">Solar Cameras</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#14" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">Analog Cameras</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#15" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">Network Video Recorder</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#16" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">Digital Video Recorder</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#17" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">Complete System</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#18" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">IP Cameras</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#19" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">Security Camera Kits</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#20" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">POE Camera Kit</a>
+                                                        </li>
+                                                        <li class="tabs-title text-start">
+                                                            <a href="#21" class="text-start blackClass" role="tab" data-toggle="tab" style="font-size: 14px;">Accesories</a>
+                                                        </li>
+                                                    </div>
+                                                </ul>
+                                                <a href="viewAllCategories.html" class="me-2 btncust text-center d-block text-white text-capitalize text-decoration-none">
+                                                        all Categories
+                                                    </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-8 ht-tab" id="tab-contents">
+                                            <div class="right-side scrollcs p-4 pt-2 tab-content" id="v-pills-tabContent">
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">WiFi Cameras</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Outdoor</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/13.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        Dc 12V2A Home Security Kit Ip Camera
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Indoor</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Baby Monitor</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Wireless Camera Kit</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/n-21.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        WIFI Camera Wireless
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">3MP WiFi NVR Kit</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">5MP WiFi NVR Kit</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">WiFi LCD NVR Kit</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/n-26.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        Microphone And Speaker 10 Ch Solar Panel Camera
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Wireless IP Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Wireless NVR 4 Ch</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Wireless NVR 8 Ch</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Battery AI Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">WiFi AI Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Solar Powered AI Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">PTZ Cameras</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/n-27.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        wifi PTZ camera 6 infrared LED 6 white LED
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">DoorBell Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Wifi Doorbell</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Video Doorbells</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Solar Cameras</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/tb-16.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        2MP Built-in Rechargeable Battery Waterproof
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">4G-Solar-Powered-PTZ-Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">3MP-HD-wifi-security-camera-battery</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Battery Camera Kit</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Outdoor Battery Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Indoor Battery Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Solar Powered Battery Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">4 Channels</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">8 Channels</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">16 Channels</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">32 Channels</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">64Channels</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">128 Channels</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">256 Channels</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">4 Channel</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">8 Channel</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">16 Channel</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">32 Channel</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">4CH Complete Systems</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/n-31.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        Professional Battery Camera System Kit
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">8CH Complete Systems</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">16CH Complete Systems</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">32CH Complete Systems</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">64CH Complete Systems</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Bullet Cameras</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/tb-20.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        ip camera cctv camera mini Bullet Network
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Turret Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">License Plate Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Floodlight Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/tb-13.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        Smart life Floodlight Night vision security camera
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Wall Light Camera</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Analog HD Camera Kits</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">PoE IP Camera Kits</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">POE Wired Camera System Kit</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">4CH Camera Kit(PoE)</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">8CH Camera Kit(PoE)</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6">
+                                                                        <div class="col">
+                                                                            <div>
+                                                                                <a href="single_product_view.html" class="d-block text-center text-decoration-none fs-14">
+                                                                                    <img src="assets/images/tb-6.png" class="img-fluid" />
+                                                                                    <p class="text-main">
+                                                                                        Inch Monitor 4pcs 3Mp Camera Kit
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">16CH Camera Kit(PoE)</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">24CH Camera Kit(PoE)</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">32CH Camera Kit(PoE)</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">POE NVR /IP NVR</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="retail">
+                                                        <div class="row">
+                                                            <nav aria-label="breadcrumb">
+                                                                <ol class="breadcrumb">
+                                                                    <li class="breadcrumb-item fs-14">
+                                                                        <a class="text-decoration-none text-dark text-capitalize" href="more-products.html">
+                                                                                more products
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-comparison.html" class="text-decoration-none">
+                                                                                product comparison
+                                                                            </a>
+                                                                    </li>
+                                                                    <li class="breadcrumb-item fs-14 active text-dark" aria-current="page">
+                                                                        <a href="product-finder.html" class="text-decoration-none">
+                                                                                product finder
+                                                                            </a>
+                                                                    </li>
+                                                                </ol>
+                                                            </nav>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Home Security</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Touch Screen Panel</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Door Sensor</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Window Sensor</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Motion Detector</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Glass Break Detector</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Key Remote</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Medical Button</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Environmental Detectors</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Smoke Detector</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 ht-ul">
+                                                                <div style="margin: 0px 0 0 20px;">
+                                                                    <h5 class="text-black-1 fw-bold text-capitalize mb-3">Flood Sensor</h5>
+
+                                                                    <div class="row g-3 row-cols-2 row-cols-md-4 row-cols-lg-6"></div>
+                                                                    <hr class="text-dark" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item me-3 dropdownshow-2 position-relative">
+                            <a class="nav-link fs-14 text-capitalize" href="">
+                                    product
+                                </a>
+
+                            <div class="drodpwncust-p w-100">
+                                <div class="container">
+                                    <div class="row g-3">
+                                        <div class="col-md-8 col-lg-9">
+                                            <div class="right-side p-4 py-3 scrollcs">
+                                                <div class="text-center mb-2">
+                                                    <h5 class="fw-semibold text-main text-capitalize">cameras</h5>
+                                                </div>
+                                                <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-4">
+                                                    <div class="col">
+                                                        <a href="single_product_view.html" class="text-decoration-none text-center position-relative bg-light-main rounded-4 card h-100 border-hover">
+                                                            <div class="badge-cust text-uppercase">
+                                                                4k
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="overflow-hidden">
+                                                                    <div class="padCard">
+                                                                        <img src="assets/images/tb-16.png" class="img-fluid w-75h m-auto" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-2">
+                                                                    <h6 class="text-capitalize mb-1 fs-15 fw-semibold m-auto text-dark text-truncate col-8">2MP Built-in Rechargeable Battery Waterproof</h6>
+                                                                    <p class="text-gray fs-13 mb-0 text-truncate col-12">
+                                                                        2MP Built-in Rechargeable Battery Waterproof
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="single_product_view.html" class="text-decoration-none text-center position-relative bg-light-main rounded-4 card h-100 border-hover">
+                                                            <div class="badge-cust text-uppercase">
+                                                                4k
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="overflow-hidden">
+                                                                    <div class="padCard">
+                                                                        <img src="assets/images/tb-13.png" class="img-fluid w-75h m-auto" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-2">
+                                                                    <h6 class="text-capitalize mb-1 fs-15 fw-semibold m-auto text-dark text-truncate col-8">Smart life Floodlight Night vision security camera</h6>
+                                                                    <p class="text-gray fs-13 mb-0 text-truncate col-12">
+                                                                        Smart life Floodlight Night vision security camera
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="single_product_view.html" class="text-decoration-none text-center position-relative bg-light-main rounded-4 card h-100 border-hover">
+                                                            <div class="badge-cust text-uppercase">
+                                                                4k
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="overflow-hidden">
+                                                                    <div class="padCard">
+                                                                        <img src="assets/images/13.png" class="img-fluid w-75h m-auto" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-2">
+                                                                    <h6 class="text-capitalize mb-1 fs-15 fw-semibold m-auto text-dark text-truncate col-8">Dc 12V2A Home Security Kit Ip Camera</h6>
+                                                                    <p class="text-gray fs-13 mb-0 text-truncate col-12">
+                                                                        Dc 12V2A Home Security Kit Ip Camera
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="single_product_view.html" class="text-decoration-none text-center position-relative bg-light-main rounded-4 card h-100 border-hover">
+                                                            <div class="badge-cust text-uppercase">
+                                                                4k
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="overflow-hidden">
+                                                                    <div class="padCard">
+                                                                        <img src="assets/images/n-26.png" class="img-fluid w-75h m-auto" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-2">
+                                                                    <h6 class="text-capitalize mb-1 fs-15 fw-semibold m-auto text-dark text-truncate col-8">Microphone And Speaker 10 Ch Solar Panel Camera</h6>
+                                                                    <p class="text-gray fs-13 mb-0 text-truncate col-12">
+                                                                        Microphone And Speaker 10 Ch Solar Panel Camera
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="single_product_view.html" class="text-decoration-none text-center position-relative bg-light-main rounded-4 card h-100 border-hover">
+                                                            <div class="badge-cust text-uppercase">
+                                                                4k
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="overflow-hidden">
+                                                                    <div class="padCard">
+                                                                        <img src="assets/images/n-31.png" class="img-fluid w-75h m-auto" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-2">
+                                                                    <h6 class="text-capitalize mb-1 fs-15 fw-semibold m-auto text-dark text-truncate col-8">Professional Battery Camera System Kit</h6>
+                                                                    <p class="text-gray fs-13 mb-0 text-truncate col-12">
+                                                                        Professional Battery Camera System Kit
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="single_product_view.html" class="text-decoration-none text-center position-relative bg-light-main rounded-4 card h-100 border-hover">
+                                                            <div class="badge-cust text-uppercase">
+                                                                4k
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="overflow-hidden">
+                                                                    <div class="padCard">
+                                                                        <img src="assets/images/tb-20.png" class="img-fluid w-75h m-auto" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-2">
+                                                                    <h6 class="text-capitalize mb-1 fs-15 fw-semibold m-auto text-dark text-truncate col-8">ip camera cctv camera mini Bullet Network</h6>
+                                                                    <p class="text-gray fs-13 mb-0 text-truncate col-12">
+                                                                        ip camera cctv camera mini Bullet Network
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="single_product_view.html" class="text-decoration-none text-center position-relative bg-light-main rounded-4 card h-100 border-hover">
+                                                            <div class="badge-cust text-uppercase">
+                                                                4k
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="overflow-hidden">
+                                                                    <div class="padCard">
+                                                                        <img src="assets/images/tb-6.png" class="img-fluid w-75h m-auto" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-2">
+                                                                    <h6 class="text-capitalize mb-1 fs-15 fw-semibold m-auto text-dark text-truncate col-8">Inch Monitor 4pcs 3Mp Camera Kit</h6>
+                                                                    <p class="text-gray fs-13 mb-0 text-truncate col-12">
+                                                                        Inch Monitor 4pcs 3Mp Camera Kit
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="single_product_view.html" class="text-decoration-none text-center position-relative bg-light-main rounded-4 card h-100 border-hover">
+                                                            <div class="badge-cust text-uppercase">
+                                                                4k
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="overflow-hidden">
+                                                                    <div class="padCard">
+                                                                        <img src="assets/images/n-27.png" class="img-fluid w-75h m-auto" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="mt-2">
+                                                                    <h6 class="text-capitalize mb-1 fs-15 fw-semibold m-auto text-dark text-truncate col-8">wifi PTZ camera 6 infrared LED 6 white LED</h6>
+                                                                    <p class="text-gray fs-13 mb-0 text-truncate col-12">
+                                                                        wifi PTZ camera 6 infrared LED 6 white LED
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-3">
+                                                    <a href="#" class="text-decoration-none text-main fw-semibold fs-12 text-capitalize">
+                                                            shop & compare cameras
+                                                            <span class="ps-2">
+                                                                <img src="assets/images/next.png" style="width: 16px;" class="img-fluid" />
+                                                            </span>
+                                                        </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-lg-3">
+                                            <div class="p-4 py-3 scrollcs doorBells">
+                                                <div class="text-center mb-2">
+                                                    <h5 class="fw-semibold text-main text-capitalize">doorbells</h5>
+                                                </div>
+                                                <div class="row g-3 justify-content-center"></div>
+                                                <div class="mt-3 ps-lg-4">
+                                                    <a href="#" class="text-decoration-none text-main fw-semibold fs-12 text-capitalize">
+                                                            shop & compare cameras
+                                                            <span class="ps-2">
+                                                                <img src="assets/images/next.png" style="width: 16px;" class="img-fluid" />
+                                                            </span>
+                                                        </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="solutions.html">Solutions</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="industries.html">Industries</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="partners.html">Partners</a>
+                        </li>
+                    </ul>
+
+                    <button class="dropbtn_zoobla header-icon header-iconbtn">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </button>
+
+                    <button class="dropbtn_zoobla header-icon">
+                            <a href=" cart.html "><i class="fa-solid fa-cart-shopping me-3"></i></a>
+                        </button>
+
+                    <form class="d-flex" role="search">
+                        <div class="dropdown_zoobla">
+                            <button class="dropbtn_zoobla header-icon">
+                                    <i class="fa-solid fa-user me-3"></i>
+                                </button>
+
+                            <div class="dropdown-content_zoobla dropdown-button-profile">
+                                <div>
+                                    <a class="dropdown-item" href="login-page.html">Log In</a>
+                                    <a class="dropdown-item" href="signup.html">Sign Up</a>
+                                    <a class="dropdown-item" href="register-partner.html">Partner</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Book Demo
+                            </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-6">
+                                            <div class="modalheader-img">
+                                                <img src="assets/images/headermodal-img.gif" alt="solution" />
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-lg-6">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                    Schedule your demo with Zoobla!
+                                                    <p>Please enter your details here! We will get back to you in 24 hours.</p>
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form method="post" action="https://zoobla.design2login.com/store-book-demo">
+                                                    <input type="hidden" name="_token" value="mvF4psnzXKkCSReXYyDFiHuFTtbidf7zBN2idCE0" />
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form-control" name="name" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1" />
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" />
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <input type="Mobile No" class="form-control" name="mobile" placeholder="Mobile No" aria-label="Mobail No" aria-describedby="basic-addon1" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div class="zoobla-theme-btn">
+                                                    <div class="button-text-wrapper">
+                                                        <input class="dark-button-text" type="submit" name="submit" />
+                                                    </div>
+
+                                                    <div class="button-bg"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ./Header -->
+
+    <section>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="sign-in">
+                    <div class="sign-in-area d-flex">
+                        <div class="col-7">
+                            <div class="sign-in-left d-flex flex-column align-items-center">
+                                <div class="login-nav d-flex my-3">
+                                    <h3 class="me-4"><a href="#" class="login1">Log In</a></h3>
+                                    <h3><a href="#" class="signup1">Sign Up</a></h3>
+                                </div>
+                                <div class="login-main d-flex flex-column">
+                                    <div class="my-2 user-1">
+                                        <input type="text" placeholder="Enter Email/Phone Number" class="input-1" />
+                                        <div class="icon-1">
+                                            <i class="fa-solid fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="my-2 user-2">
+                                        <input type="password" placeholder="Password" class="input-2" />
+                                        <i class="fa-solid fa-lock icon-2"></i>
+                                    </div>
+                                </div>
+                                <div class="login-bottom d-flex align-items-center my-3">
+                                    <h6 class="mb-0 me-4"><a href="#" class="fw-bold">Forget Your Password?</a></h6>
+                                    <a href="#" class="theme-btn theme-btn2">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="sign-in-img">
+                                <!-- <img src="images/hero-1.png" alt="" width="100%" height="100%"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--========================================= main body start =============================================================-->
+
+
+
+    <!-- header end -->
+
+
+
+
+
+
+
+    <!-- main body part start -->
+    <main>
+
+
+
+
+        <section class="banner_top_cloud1">
+            <div class="savedata-bannerbg">
+                <img src="./assets/images/save-databannergb.png">
+            </div>
+            <div class="container">
+                <div class="zooblabanner-Peoplerow">
+                    <div class="row">
+                        <div class="col-sm-6 banner_f2cl aos-init abba" data-aos="fade-up" data-aos-duration="5000">
+                            <div class="cloud-banner-image cloud-banner-imagemmm">
+                                <img src="./assets/images/cloud_storage.png">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 banner_f2cl aos-init bggb2" data-aos="fade-left" data-aos-duration="5000">
+
+                            <div class="cloud_sub_contain">
+                                <span class="text-blue"> Zoobla People</span>
+                                <div class="bottom-border"></div>
+                                <p>A new solution for precise visitor counting by Zoobla.
+                                    <p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--video analytics service start-->
+
+
+
+        <!--video analytics service end-->
+
+
+
+        <!--zoobla people start-->
+
+        <section class="py-3 my-4 bg-lgray">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <h2 class="h1 fw-bold mb-0 pt-4 pb-4">Why use a Zobla people?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-lg-6 aos-init" data-aos="fade-left" data-aos-duration="5000">
+                        <div class="zoobla-people-image mt-5 pt-5">
+                            <img src="./assets/images/cloud_storage.png">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-lg-6">
+                        <div class="row">
+                            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                <div class="pricing-box mt-3">
+                                    <div class="pb-2 price-icon"><i class="fa fa-check" style="color:blue;"></i></div>
+                                    <h4>Increase staff effectiveness</h4>
+                                    <p>Highest counter accuracy when compared to competing services (IR and 2D counters)</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                <div class="pricing-box mt-5 mb-5">
+                                    <div class="pb-2 price-icon"><i class="fa-regular fa-heart" style="color:red;"></i></div>
+                                    <h4>Increase customer loyalty</h4>
+                                    <p>Keep track of objects that cross a given line in the camera's field of vision</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                <div class="pricing-box  mb-3">
+                                    <div class="pb-2 price-icon"><i class="fa-solid fa-comments" style="color:#ff9c00;;"></i></div>
+                                    <h4>Reduce customer disputes</h4>
+                                    <p>Detailed hourly and daily visitor reports at your points of sale</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                <div class="pricing-box  mb-5">
+                                    <div class="pb-2 price-icon"><i class="fa-solid fa-arrow-right-arrow-left" style="color:green;"></i></div>
+                                    <h4>Speed up the payment Process</h4>
+                                    <p>Data is processed and stored in the zoobla cloud and only one camera is required, new or existing.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--zoobla people end-->
+
+
+
+        <!--zoobla benefit section start -->
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <h2 class="h1 fw-bold mb-0 pb-4">Who can benefit</h2>
+                    </div>
+                </div>
+
+                <div class="row py-5">
+                    <div class="col-sm-12 col-md-6 col-lg-4 aos-animate" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                        <div class="benefit-section">
+                            <div class="benefit-section-content">
+                                <div class="benefit-section-overlay"></div>
+                                <img class="benefit-section-image" src="assets/images/benefit8.jpg" alt="">
+                                <div class="benefit-section-details fadeIn-top">
+                                    <h3>Retail outlets</h3>
+                                    <p>Compare traffic across locations and analyze which would benefit most from special attention</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 aos-animate" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                        <div class="benefit-section">
+                            <div class="benefit-section-content">
+                                <div class="benefit-section-overlay"></div>
+                                <img class="benefit-section-image" src="assets/images/benefit5.jpg" alt="">
+                                <div class="benefit-section-details fadeIn-top">
+                                    <h3>Exhibitions and sports arenas</h3>
+                                    <p>Compare traffic across locations and analyze which would benefit most from special attention</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-4 aos-animate" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+                        <div class="benefit-section">
+                            <div class="benefit-section-content">
+                                <div class="benefit-section-overlay"></div>
+                                <img class="benefit-section-image" src="assets/images/benefit4.jpg" alt="">
+                                <div class="benefit-section-details fadeIn-top">
+                                    <h3>Landlords</h3>
+                                    <p>Compare traffic across locations and analyze which would benefit most from special attention</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--zoobla benefit section end -->
+
+
+        <!--zoobla service option start -->
+
+        <section class="bg-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center">
+                        <h2 class="h1 fw-bold mb-0 pt-5 pb-4">Service Options</h2>
+                    </div>
+                </div>
+
+                <div class="row pb-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mt-4 mb-5">
+                        <div class="service-area aos-init" data-aos="fade-left" data-aos-duration="5000">
+                            <div class="service-area-content text-center">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-info"></i>
+                                </div>
+                                <h4 class="mt-2">Queue registration</h4>
+                                <p>Need technical assistance? Find answers to frequently asked questions or get free technical support.</p>
+
+                            </div>
+                            <div class="service-button">
+                                <button class="service-btn">Get Support</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 mt-4 mb-5">
+                        <div class="service-area">
+                            <div class="service-area-content text-center">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div>
+                                <h4 class="mt-2">Detailed queue information</h4>
+                                <p>The tool detects the number of people in queueing areas. Knowing actual customer numbers empowers you to manage human resources in both the short and long-term.</p>
+
+                            </div>
+                            <div class="service-button">
+                                <button class="service-btn">Get Support</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-4 mt-4 mb-5 aos-init" data-aos="fade-right" data-aos-duration="5000">
+                        <div class="service-area">
+                            <div class="service-area-content text-center">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-bell"></i>
+                                </div>
+                                <h4 class="mt-2">Instant queue notifications</h4>
+                                <p>Receive email notifications about selected events of saving and viewing video recordings.</p>
+
+                            </div>
+                            <div class="service-button">
+                                <button class="service-btn service-btn22">Get Support</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <!--zoobla service option end -->
+
+
+
+        <!--zoobla account start-->
+
+        <section>
+            <div class="container">
+                <div class="row pt-5 pb-2">
+                    <div class="text-center">
+                        <h5>Zoobla Account</h5>
+                        <h2 class="h1 fw-bold mb-0 pt-1 pb-4">How can I enable the Zoobla people?</h2>
+                    </div>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-4 mb-5 roshnax">
+                        <div class="account-area">
+                            <div class="account-area-content text-center">
+                                <div class="account-icon">
+                                    <i class="fa-solid fa-plus" style="color:blue;"></i>
+                                </div>
+                                <h4 class="mt-2">Create an zoobla Account</h4>
+                                <p>Sign up for the service and select the "For business" account type</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 colcmn">
+                        <img src="./assets/images/92820-arrow.gif" style="margin-top:7rem;">
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-4 mb-5">
+                        <div class="account-area">
+                            <div class="account-area-content text-center">
+                                <div class="account-icon">
+                                    <i class="fa-solid fa-link" style="color:#ffce00"></i>
+                                </div>
+                                <h4 class="mt-2">Create an zoobla Account</h4>
+                                <p>Sign up for the service and select the "For business" account type</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 colcmn">
+                        <img src="./assets/images/92820-arrow.gif" style="margin-top:7rem;">
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-3 mt-4 mb-5">
+                        <div class="account-area account-area22">
+                            <div class="account-area-content text-center">
+                                <div class="account-icon">
+                                    <i class="fa-solid fa-user-check" style="color:green;"></i>
+                                </div>
+                                <h4 class="mt-2">Create an zoobla Account</h4>
+                                <p>Sign up for the service and select the "For business" account type</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="row pb-4">
+                    <div class="col_image_cloud_under_button" style="text-align: center;">
+                        <div style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="button-wrapper flex new">
+                            <a href="#" class="zoobla-theme-btn ">
+
+                                <div class="button-text-wrapper">
+                                    <div class="dark-button-text">Sign up a free demo</div>
+                                </div>
+
+                                <div class="button-bg button-bg22" style="background-color: #197ecf;"></div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--zoobla account end-->
+
+        <!--zoobla pricing section start-->
+
+        <section class="bg-gray pt-4 pb-4">
+            <div class="container">
+                <div class="row pt-5 pb-2">
+                    <div class="text-center">
+                        <h3 class="fw-bold mb-0 pt-1 pb-4">All Pricing Plans Include The Full Cloud Service Functionality:</h3>
+                    </div>
+                </div>
+                <div class="row pt-2 pb-5">
+                    <div class="col-sm-12 col-md-6 col-lg-3 aos-init aos-animate" data-aos="fade-right">
+                        <div class="pricing-details">
+                            <div class="image">
+                                <i class="fa-solid fa-list"></i>
+                            </div>
+                            <div class="pricing-content pt-3">
+                                <p>Unlimited local archive and video export to a file</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 aos-init aos-animate" data-aos="fade-up">
+                        <div class="pricing-details pricing-details33">
+                            <div class="image">
+                                <i class="fa-solid fa-list"></i>
+                            </div>
+                            <div class="pricing-content pt-3">
+                                <p>Unlimited local archive and video export to a file</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 aos-init aos-animate" data-aos="fade-down">
+                        <div class="pricing-details pricing-details22">
+                            <div class="image">
+                                <i class="fa-solid fa-list"></i>
+                            </div>
+                            <div class="pricing-content pt-3">
+                                <p>Unlimited local archive and video export to a file</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 aos-init aos-animate" data-aos="fade-left">
+                        <div class="pricing-details pricing-details22">
+                            <div class="image">
+                                <i class="fa-solid fa-list"></i>
+                            </div>
+                            <div class="pricing-content pt-3">
+                                <p>Unlimited local archive and video export to a file</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--zoobla pricing section end-->
+
+
+        <!--testimonials section start-->
+        <section class="third_cloud_section">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col" style="text-align: center;">
+                        <h1 class="second_cloud_title pt-5 mt-4">Our Client Reviews</h1>
+                    </div>
+                </div>
+
+
+                <div class="row three_cloud_box_sec pt-5 mt-5 mb-5">
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="box_cloud">
+                            <img src="./assets/images/profile-80.jpeg" style=" margin-top: -5%;
+    margin-left: 6%;position:absolute;border: 10px solid #2199e1;
+    border-radius: 50%;" class="center-block img-circle" alt="Customer Feedback">
+                            <div class="star mt-5 mb-3" style="text-align:center">
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                            </div>
+                            <div style="text-align:center;">
+                                <h3 class="customer-name" style="font-family: roboto;font-weight:600;">Md Nahidul</h3>
+                                <h5 class="customer-name" style="font-family: roboto;font-weight: 600;color: #2199e1;">Project Manager</h5>
+                                <p style="font-family: cursive' , sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="box_cloud">
+                            <img src="./assets/images/profile-80.jpeg" style=" margin-top: -5%;
+    margin-left: 6%;position:absolute;border: 10px solid #2199e1;
+    border-radius: 50%;" class="center-block img-circle" alt="Customer Feedback">
+                            <div class="star mt-5 mb-3" style="text-align:center">
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                            </div>
+                            <div style="text-align:center;">
+                                <h3 class="customer-name" style="font-family: roboto;font-weight:600;">Md Nahidul</h3>
+                                <h5 class="customer-name" style="font-family: roboto;font-weight: 600;color: #2199e1;">Project Manager</h5>
+                                <p style="font-family: cursive' , sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="box_cloud">
+                            <img src="./assets/images/profile-80.jpeg" style=" margin-top: -5%;
+    margin-left: 6%;position:absolute;border: 10px solid #2199e1;
+    border-radius: 50%;" class="center-block img-circle" alt="Customer Feedback">
+                            <div class="star mt-5 mb-3" style="text-align:center">
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                            </div>
+                            <div style="text-align:center;">
+                                <h3 class="customer-name" style="font-family: roboto;font-weight:600;">Md Nahidul</h3>
+                                <h5 class="customer-name" style="font-family: roboto;font-weight: 600;    color: #2199e1;">Project Manager</h5>
+                                <p style="font-family: cursive' , sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="box_cloud">
+                            <img src="./assets/images/profile-80.jpeg" style=" margin-top: -5%;
+    margin-left: 6%;position:absolute;border: 10px solid #2199e1;
+    border-radius: 50%;" class="center-block img-circle" alt="Customer Feedback">
+                            <div class="star mt-5 mb-3 " style="text-align:center">
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                                <i class="fa fa-star" style="color:#edba43"></i>
+                            </div>
+                            <div style="text-align:center;">
+                                <h3 class="customer-name" style="font-family: roboto;font-weight:600;">Md Nahidul</h3>
+                                <h5 class="customer-name" style="font-family: roboto;font-weight: 600;color: #2199e1;">Project Manager</h5>
+                                <p style="cursive' , sans-serif;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--testimonial section end-->
+
+
+
+        <section class="subscription d-flex justify-content-center">
+            <div class="width-95">
+                <div class="row g-3 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center">
+                            <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true">
+                                <h2 class="text-white fw-bold fs-2">Get Our Newsletter</h2>
+                                <h6 class="text-white">
+                                    Want the latest and greatest from our blog straight to your inbox ?<br> Chehk us your details and get a sweet weekly mail.
+                                </h6>
+                            </div>
+                            <form class="form-subscribe mt-5" action="#" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000" data-aos-once="true">
+                                <div class="input-group">
+                                    <input type="text" class="form-control input-lg" placeholder="Your email address">
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-success btn-lg" type="submit">Subscribe</button>
+                                </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-black">
+            <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path class="footer-wave-path"
+                d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z">
+            </path>
+        </svg>
+            <div class="d-flex justify-content-center">
+                <div class="width-95 py-5">
+                    <div class="row g-3">
+                        <div class="col-lg-3">
+                            <div class="me-lg-3 " data-aos="fade-up-left" data-aos-duration="1000" data-aos-once="true">
+                                <a href="#" class="logo-footer">
+                                    <img src="assets/images/logo-sky.png" class="img-fluid">
+                                </a>
+                                <p class="text-white">Zoobla's video surveillance platform connects your security camera footage with your POS data and creates a dashboard of analytics and searchable moments.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="row g-3 mt-4">
+                                <div class="col-lg-3">
+                                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                                        <h5 class="text-white text-uppercase mb-3">product</h5>
+                                        <ul class="list-unstyled lh-lg">
+                                            <li>
+                                                <a href="partners.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                for business
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="cloud-storage.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                cloud service
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="faq.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                purchase FAQs
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                                        <h5 class="text-white text-uppercase mb-3">services</h5>
+                                        <ul class="list-unstyled lh-lg">
+                                            <li>
+                                                <a href="index.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                smart home
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="save-data.html" class="text-white d-block fs-15 text-decoration-none">
+                                                Save Data in Cloud
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-security.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                home security
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="term-condition.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                terms & condition
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                                        <h5 class="text-white text-uppercase mb-3">Supports</h5>
+                                        <ul class="list-unstyled lh-lg">
+                                            <li>
+                                                <a href="index.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                get started
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="support.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                support
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="privacy-policy.html" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                reseller policy
+                                            </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="text-white text-capitalize d-block fs-15 text-decoration-none">
+                                                privacy policy
+                                            </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                                        <h5 class="text-white text-uppercase mb-3">contact us</h5>
+                                        <ul class="list-unstyled lh-lg">
+                                            <li>
+                                                <a href="" class="texthover mb-3 text-capitalize d-flex align-items-center fs-14 text-decoration-none">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="assets/images/email.png" class="img-fluid">
+                                                    </div>
+                                                    <div class="ms-3 text-white flex-grow-1" style="line-height: 24px;">
+                                                        <span class="fw-bold fs-15 d-block">email</span>
+                                                        <span class="fs-14">support@zoobla.com</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="texthover mb-3 text-capitalize d-flex align-items-center fs-14 text-decoration-none">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="assets/images/phone-call.png" class="img-fluid">
+                                                    </div>
+                                                    <div class="ms-3 text-white flex-grow-1" style="line-height: 24px;">
+                                                        <span class="fw-bold fs-15 d-block">mobile number</span>
+                                                        <span class="fs-14">8777778758</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="texthover text-capitalize d-flex align-items-center fs-14 text-decoration-none">
+                                                    <div class="flex-shrink-0">
+                                                        <img src="assets/images/pin.png" class="img-fluid">
+                                                    </div>
+                                                    <div class="ms-3 text-white flex-grow-1" style="line-height: 24px;">
+                                                        <span class="fw-bold fs-15 d-block">Address</span>
+                                                        <span class="fs-14">10365 Railroad Drive, Suite A, El Paso, TX,
+                                                        79924-1698</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="d-flex align-items-center">
+                                <a href="#" class="d-block w-70">
+                                    <img src="assets/images/playstore.png" class="img-fluid">
+                                </a>
+                                <a href="#" class="d-block w-70">
+                                    <img src="assets/images/appstore.png" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="pt-4">
+                                <p class="mb-0 fs-14 text-center text-white">
+                                    Copyright © 2023 <a href="" class="text-white text-decoration-none">Zoobla</a>. All rights reserved
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- ======================================================script========================================================== -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://kit.fontawesome.com/00b231478f.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+        <!-- <script src="http://zoobla.design2login.com/public/frontend/./dist/script.js"></script> -->
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <!-- <script type="text/javascript" src="http://zoobla.design2login.com/public/assets/js/script.js"></script> -->
+
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            function toggle() {
+                let x = document.getElementById("navbarScroll");
+                if (x.style.display === "none") {
+                    alert()
+                }
+            }
+        </script>
+
+
+        <!-- image change on hover -->
+        <script>
+            function changeImage(anything) {
+                document.getElementById('imagechangemenu').src = anything;
+                document.getElementById('imagechangemenu1').src = anything;
+            }
+        </script>
+        <!-- stickey header -->
+        <Script>
+            window.addEventListener("scroll", function() {
+                var header = document.querySelector("header");
+                header.classList.toggle("color-header", window.scrollY > 0);
+            })
+        </Script>
+
+
+        <script>
+            humbarg = document.querySelector(".menuToggle_zoobla");
+            humbarg.onclick = function() {
+                navBar = document.querySelector(".navbar_zoobla");
+                navBar.classList.toggle("active");
+            }
+        </script>
+
+
+
+
+        <script>
+            $('#example-tabs .sidenav li.tabs-title').mouseover(function(e) {
+                $('#example-tabs .sidenav li.tabs-title').removeClass("active show");
+                $(this).addClass("active show");
+                $("#tab-contents .tab-content .tab-pane")
+                    .removeClass("active show")
+                    .eq($(this).index())
+                    .addClass("active show");
+            })
+        </script>
+        <!-- shop by category end -->
+
+
+        <script>
+            $(document).ready(function() {
+                var itemsMainDiv = ('.MultiCarousel');
+                var itemsDiv = ('.MultiCarousel-inner');
+                var itemWidth = "";
+
+                $('.leftLst, .rightLst').click(function() {
+                    var condition = $(this).hasClass("leftLst");
+                    if (condition)
+                        click(0, this);
+                    else
+                        click(1, this)
+                });
+
+                ResCarouselSize();
+
+
+
+
+                $(window).resize(function() {
+                    ResCarouselSize();
+                });
+
+                //this function define the size of the items
+                function ResCarouselSize() {
+                    var incno = 0;
+                    var dataItems = ("data-items");
+                    var itemClass = ('.item');
+                    var id = 0;
+                    var btnParentSb = '';
+                    var itemsSplit = '';
+                    var sampwidth = $(itemsMainDiv).width();
+                    var bodyWidth = $('body').width();
+                    $(itemsDiv).each(function() {
+                        id = id + 1;
+                        var itemNumbers = $(this).find(itemClass).length;
+                        btnParentSb = $(this).parent().attr(dataItems);
+                        itemsSplit = btnParentSb.split(',');
+                        $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+                        if (bodyWidth >= 1200) {
+                            incno = itemsSplit[3];
+                            itemWidth = sampwidth / incno;
+                        } else if (bodyWidth >= 992) {
+                            incno = itemsSplit[2];
+                            itemWidth = sampwidth / incno;
+                        } else if (bodyWidth >= 768) {
+                            incno = itemsSplit[1];
+                            itemWidth = sampwidth / incno;
+                        } else {
+                            incno = itemsSplit[0];
+                            itemWidth = sampwidth / incno;
+                        }
+                        $(this).css({
+                            'transform': 'translateX(0px)',
+                            'width': itemWidth * itemNumbers
+                        });
+                        $(this).find(itemClass).each(function() {
+                            $(this).outerWidth(itemWidth);
+                        });
+
+                        $(".leftLst").addClass("over");
+                        $(".rightLst").removeClass("over");
+
+                    });
+                }
+
+
+                //this function used to move the items
+                function ResCarousel(e, el, s) {
+                    var leftBtn = ('.leftLst');
+                    var rightBtn = ('.rightLst');
+                    var translateXval = '';
+                    var divStyle = $(el + ' ' + itemsDiv).css('transform');
+                    var values = divStyle.match(/-?[\d\.]+/g);
+                    var xds = Math.abs(values[4]);
+                    if (e == 0) {
+                        translateXval = parseInt(xds) - parseInt(itemWidth * s);
+                        $(el + ' ' + rightBtn).removeClass("over");
+
+                        if (translateXval <= itemWidth / 2) {
+                            translateXval = 0;
+                            $(el + ' ' + leftBtn).addClass("over");
+                        }
+                    } else if (e == 1) {
+                        var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+                        translateXval = parseInt(xds) + parseInt(itemWidth * s);
+                        $(el + ' ' + leftBtn).removeClass("over");
+
+                        if (translateXval >= itemsCondition - itemWidth / 2) {
+                            translateXval = itemsCondition;
+                            $(el + ' ' + rightBtn).addClass("over");
+                        }
+                    }
+                    $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+                }
+
+                //It is used to get some elements from btn
+                function click(ell, ee) {
+                    var Parent = "#" + $(ee).parent().attr("id");
+                    var slide = $(Parent).attr("data-slide");
+                    ResCarousel(ell, Parent, slide);
+                }
+
+            });
+        </script>
+        <script>
+            $(document).ready(function() {
+
+                $('#itemslider').carousel({
+                    interval: 3000
+                });
+
+                $('.carousel-showmanymoveone .item').each(function() {
+                    var itemToClone = $(this);
+
+                    for (var i = 1; i < 6; i++) {
+                        itemToClone = itemToClone.next();
+
+                        if (!itemToClone.length) {
+                            itemToClone = $(this).siblings(':first');
+                        }
+
+                        itemToClone.children(':first-child').clone()
+                            .addClass("cloneditem-" + (i))
+                            .appendTo($(this));
+                    }
+                });
+
+                $('.carouselExample').carousel({
+                    interval: true
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                $(".owl-carousel").owlCarousel({
+                    items: 3,
+                    autoplay: true,
+                    margin: 30,
+                    loop: true,
+                    dots: true
+
+                });
+            });
+        </script>
+
+
+
+
+
+
+        <!-- footer start -->
+
+
+
+        <script>
+            function frist() {
+                let l = document.getElementById("u").style.display = "none";
+                let d = document.getElementById("n").style.display = "none";
+                let n = document.getElementById("l").style.display = "block";
+                let e = document.getElementById("l");
+                e.target.style.borderBottom = "solid blue"
+
+            }
+
+            function second() {
+                let l = document.getElementById("u").style.display = "block";
+                let d = document.getElementById("n").style.display = "none";
+                let a = document.getElementById("l").style.display = "none";
+
+
+            }
+
+            function third() {
+                let l = document.getElementById("u").style.display = "none";
+                let a = document.getElementById("n").style.display = "block";
+                let d = document.getElementById("l").style.display = "none";
+            }
+        </script>
+
+        <script>
+            function frista() {
+                let l = document.getElementById("s").style.display = "none";
+                let d = document.getElementById("d").style.display = "none";
+                let n = document.getElementById("a").style.display = "block";
+                let e = document.getElementById("a");
+                e.target.style.borderBottom = "solid blue"
+
+            }
+
+            function seconda() {
+                let l = document.getElementById("s").style.display = "block";
+                let d = document.getElementById("d").style.display = "none";
+                let a = document.getElementById("a").style.display = "none";
+
+
+            }
+
+            function thirda() {
+                let l = document.getElementById("s").style.display = "none";
+                let a = document.getElementById("d").style.display = "block";
+                let d = document.getElementById("a").style.display = "none";
+            }
+        </script>
+
+        <script>
+            function frists() {
+                let l = document.getElementById("g").style.display = "none";
+                let d = document.getElementById("h").style.display = "none";
+                let n = document.getElementById("f").style.display = "block";
+                let e = document.getElementById("f");
+                e.target.style.borderBottom = "solid blue"
+
+            }
+
+            function seconds() {
+                let l = document.getElementById("g").style.display = "block";
+                let d = document.getElementById("h").style.display = "none";
+                let a = document.getElementById("f").style.display = "none";
+
+
+            }
+
+            function thirds() {
+                let l = document.getElementById("g").style.display = "none";
+                let a = document.getElementById("h").style.display = "block";
+                let d = document.getElementById("f").style.display = "none";
+            }
+        </script>
+
+        <script>
+            function fristd() {
+                let l = document.getElementById("k").style.display = "none";
+                let d = document.getElementById("p").style.display = "none";
+                let n = document.getElementById("j").style.display = "block";
+                let e = document.getElementById("j");
+                e.target.style.borderBottom = "solid blue"
+
+            }
+
+            function secondd() {
+                let l = document.getElementById("k").style.display = "block";
+                let d = document.getElementById("p").style.display = "none";
+                let a = document.getElementById("j").style.display = "none";
+
+
+            }
+
+            function thirdd() {
+                let l = document.getElementById("k").style.display = "none";
+                let a = document.getElementById("p").style.display = "block";
+                let d = document.getElementById("j").style.display = "none";
+            }
+        </script>
+
+        <script>
+            let menu = document.querySelector('.mobile-menu');
+
+            function myMenu() {
+                menu.classList.add('active')
+            }
+        </script>
+        <script>
+            let menuclose = document.querySelector('.mobile-menu');
+
+            function myClose() {
+                menuclose.classList.remove('active');
+            }
+        </script>
+
+</body>
+
+</html>
